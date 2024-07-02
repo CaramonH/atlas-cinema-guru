@@ -28,4 +28,4 @@ const Input = ({label, type, className, value, setValue, icon, inputAttributes})
   )
 }
 
-export default Input
+export default Input;

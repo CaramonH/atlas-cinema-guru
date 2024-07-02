@@ -11,3 +11,22 @@
 .custom-button:hover {
   background-color: darkred; /* Color change on hover */
 }
+
+.search-bar-container {
+  position: relative;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #888;
+}
+
+.search-bar-wrapper input {
+  padding-left: 30px; /* Adjust this value based on your icon size */
+}
