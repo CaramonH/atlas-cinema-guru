@@ -1,43 +1,129 @@
-.custom-header {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
+@import '../../App.css';
+
+/* Header Navigation */
+.header-nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 0 3%;
+  background-color: var(--color-black);
 }
 
-.custom-header p:first-of-type {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
+.header-nav p {
+  color: var(--color-white);
 }
 
-.custom-header .right-elements {
+/* User Options */
+.user-options {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
-.custom-header img {
-  width: 40px;
-  height: 40px;
+.user-options img {
+  height: 2rem;
+  margin-right: 10px;
   border-radius: 50%;
-  border: 2px solid red;
-  object-fit: cover;
+  border: 1px solid var(--color-light-red);
 }
 
-.custom-header .right-elements p {
-  margin: 0;
+.user-options p {
+  margin-right: 1.5rem;
 }
 
-.custom-header span {
-  color: red;
+.logout-span {
+  color: var(--color-dark-red);
   cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-color: var(--color-dark-red);
+  transition: width 0.5s;
+}
+
+.sidebar.open {
+  width: 218px;
+}
+
+/* Navigation Menu */
+.navigation-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
   display: flex;
   align-items: center;
+  padding: 20px;
+  color: var(--color-white);
+  cursor: pointer;
+  justify-content: center;
 }
 
-.custom-header span svg {
-  margin-left: 5px;
+.nav-item.selected {
+  background-color: var(--color-light-red);
+}
+
+.nav-item span {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.sidebar.open .nav-item {
+  justify-content: flex-start;
+}
+
+.sidebar.open .nav-item span {
+  visibility: visible;
+  opacity: 1;
+  min-width: 80px;
+}
+
+.sidebar.open .nav-item .fa-icon {
+  margin-right: 10px;
+}
+
+/* Activities Container */
+.activities-container {
+  display: none;
+  margin: 5px;
+  margin-top: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: var(--color-dark-gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar.open .activities-container {
+  display: block;
+}
+
+/* Activities Title */
+.activities-title {
+  margin: 0;
+  padding: 10px;
+  color: var(--color-white);
+  font-weight: bold;
+  text-decoration: underline solid white;
+  white-space: nowrap;
+}
+
+/* Activity List */
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px 10px;
+}
+
+.activity p {
+  margin: 0 0 10px;
+  color: var(--color-white);
 }

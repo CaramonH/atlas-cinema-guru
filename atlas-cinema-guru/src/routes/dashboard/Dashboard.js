@@ -5,7 +5,7 @@ import Header from '../../components/navigation/Header';
 // import SideBar from '../../components/navigation/SideBar';
 // import HomePage from './HomePage';
 
-// Placeholder components
+// Fake Components
 const Favorites = () => <div>Favorites</div>;
 const WatchLater = () => <div>Watch Later</div>;
 
