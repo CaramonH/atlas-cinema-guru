@@ -1,51 +1,54 @@
-/* Container for the Authentication component */
-.authentication {
-  max-width: 400px;
+@import '../../App.css';
+
+/* Color classes */
+.light-red {
+  background-color: var(--color-light-red) !important;
+}
+
+.dark-red {
+  background-color: var(--color-dark-red) !important;
+}
+
+/* Authentication container */
+.auth-container {
+  width: 50%;
+  max-width: 450px;
   margin: 0 auto;
-  padding: 20px;
-  width: 100%;
 }
 
-/* Buttons container */
-.auth-buttons {
+/* Error message */
+.error-text {
+  color: var(--color-dark-red);
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Login and Register sections */
+.auth-section {
+  background-color: var(--color-white);
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  padding: 5%;
 }
 
-.auth-buttons .custom-button {
-  flex: 1;
+.auth-section p {
+  font-size: 19px;
+  color: var(--color-black-text);
+  align-self: center;
+}
+
+.auth-button {
+  align-self: flex-end;
+}
+
+/* Toggle buttons for switching between login and register */
+.toggle-buttons {
+  display: flex;
+}
+
+.toggle-buttons .custom-button {
   margin: 0;
-}
-
-/* Headings in Login and Register */
-.authentication h1 {
-  margin: 30px 0;
-}
-
-/* Form styling */
-.authentication form {
-  position: relative;
-  padding-bottom: 60px; /* Space for the submit button */
-}
-
-/* Positioning of Sign In and Sign Up buttons */
-.authentication form .SignIn-Button,
-.authentication form .SignUp-Button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-/* Input fields styling */
-.auth-input {
-  margin-bottom: 15px;
-}
-
-/* Custom button styling */
-.custom-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-  font-size: 16px;
+  padding: 3% 10%;
+  width: 50%;
+  font-weight: 800;
 }
