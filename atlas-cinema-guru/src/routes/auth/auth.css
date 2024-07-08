@@ -1,6 +1,5 @@
 @import '../../App.css';
 
-/* Color classes */
 .light-red {
   background-color: var(--color-light-red) !important;
 }
@@ -9,44 +8,43 @@
   background-color: var(--color-dark-red) !important;
 }
 
-/* Authentication container */
-.auth-container {
+.authentication {
   width: 50%;
   max-width: 450px;
-  margin: 0 auto;
 }
 
-/* Error message */
-.error-text {
+.error-message {
   color: var(--color-dark-red);
   margin-top: 10px;
   text-align: center;
 }
 
-/* Login and Register sections */
-.auth-section {
+/* Login and Register styling */
+.login, .register {
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
   padding: 5%;
+  margin-top: 1.5px;
 }
 
-.auth-section p {
+.login-button, .register-button {
+  align-self: flex-end;
+}
+
+.login p, .register p {
   font-size: 19px;
   color: var(--color-black-text);
   align-self: center;
 }
 
-.auth-button {
-  align-self: flex-end;
-}
-
-/* Toggle buttons for switching between login and register */
-.toggle-buttons {
+/* Toggle buttons */
+.toggle-auth {
   display: flex;
+  flex-direction: row;
 }
 
-.toggle-buttons .custom-button {
+.toggle-auth Button {
   margin: 0;
   padding: 3% 10%;
   width: 50%;
