@@ -1,0 +1,43 @@
+.custom-header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-header p:first-of-type {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.custom-header .right-elements {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.custom-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid red;
+  object-fit: cover;
+}
+
+.custom-header .right-elements p {
+  margin: 0;
+}
+
+.custom-header span {
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.custom-header span svg {
+  margin-left: 5px;
+}
