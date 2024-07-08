@@ -1,0 +1,54 @@
+/* Styles for the Authentication component */
+.authentication {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Make sign in and sign up buttons as wide as their container */
+.auth-buttons {
+  display: flex;
+  width: 100%;
+}
+
+.auth-buttons .custom-button {
+  flex: 1;
+  margin: 0;
+}
+
+/* Add space above and below h1 elements in Login and Register */
+.authentication h1 {
+  margin: 30px 0;
+}
+
+/* Style for the form to allow positioning of the submit button */
+.authentication form {
+  position: relative;
+  padding-bottom: 60px; /* Space for the submit button */
+}
+
+/* Position 'Sign In' and 'Sign Up' buttons in the bottom right corner */
+.authentication form .SignIn-Button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.authentication form .SignUp-Button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Additional styles for inputs and buttons for better appearance */
+.auth-input {
+  margin-bottom: 15px;
+}
+
+.custom-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 16px;
+}
