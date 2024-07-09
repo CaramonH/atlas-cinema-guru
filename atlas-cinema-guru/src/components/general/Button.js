@@ -1,16 +1,13 @@
-import React from 'react'
+import React from 'react';
 import './general.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// label: String – The button label
-// className: String – Button custom classes
-// onClick: Function – The onClick handler for the button.
-// icon(optional): FontAwesomeIcon – An icon to decorate the button with.
-const Button = ({label, className, onClick, icon}) => {
+function Button({ label, className, onClick, icon, type }) {
   return (
-    <button className="custom-button" onClick={onClick}>
-        {label}
+    <button className={className} onClick={onClick} type={type}>
+      {icon && <FontAwesomeIcon icon={icon} />} {label}
     </button>
-  )
+  );
 }
 
-export default Button;
+export default Button

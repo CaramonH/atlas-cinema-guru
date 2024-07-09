@@ -13,6 +13,7 @@ const HomePage = () => {
   const [sort, setSort] = useState('');
   const [title, setTitle] = useState('');
   const [page, setPage] = useState(1);
+  const accessToken = localStorage.getItem('accessToken');
 
   useEffect(() => {
     loadMovies(page);
@@ -22,19 +23,24 @@ const HomePage = () => {
     try {
       const response = await axios.get('http://localhost:8000/api/titles/advancedsearch', {
         params: {
-          minYear,
-          maxYear,
-          genres,
-          title,
-          sort,
-          page: pageNum
+          minYear: minYear,
+          maxYear: maxYear,
+          genres: genres.join(','),
+          title: title,
+          sort: sort,
+          page: pageNum,
         }
       });
-      setMovies(prevMovies => [...prevMovies, ...response.data]);
+      setMovies(prevMovies => [...prevMovies, ...response.data.titles]);
     } catch (error) {
       console.error('Failed to load movies:', error);
     }
   };
+
+// Fetch movies from API when any of the filtering or pagination criteria change
+  useEffect(() => {
+    loadMovies(page);
+  }, [minYear, maxYear, genres, sort, title, page]);
 
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
@@ -59,4 +65,4 @@ const HomePage = () => {
   );
 }
 
-export default HomePage;
+export default HomePage

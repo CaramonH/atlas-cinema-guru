@@ -11,9 +11,9 @@ const SelectInput = ({label, options=[], className, value, setValue}) => {
     setValue(event.target.value)
   }
   return (
-    <div className={"select-input-container"}>
+    <div className={`select-input ${className || ''}`}>
       {label && <label>{label}</label>}
-      <select value={value} onChange={handleSelect}>
+      <select value={value} onChange={handleSelect} className="select-element">
         {options.map((option, index) => (
           <option key={index} value={option.value}>
             {option.label}
@@ -22,6 +22,6 @@ const SelectInput = ({label, options=[], className, value, setValue}) => {
       </select>
     </div>
   );
-};
+}
 
 export default SelectInput
