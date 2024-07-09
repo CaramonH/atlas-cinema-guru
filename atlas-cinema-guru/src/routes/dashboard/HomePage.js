@@ -20,7 +20,7 @@ const HomePage = () => {
 
   const loadMovies = async (pageNum) => {
     try {
-      const response = await axios.get('/api/titles/advancedsearch', {
+      const response = await axios.get('http://localhost:8000/api/titles/advancedsearch', {
         params: {
           minYear,
           maxYear,
