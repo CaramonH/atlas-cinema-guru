@@ -2,7 +2,7 @@ import React from 'react';
 import './dashboard.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from '../../components/navigation/Header';
-// import SideBar from '../../components/navigation/SideBar';
+import SideBar from '../../components/navigation/SideBar';
 // import HomePage from './HomePage';
 
 // Fake Components
@@ -15,7 +15,7 @@ function Dashboard({ userUsername, setIsLoggedIn }) {
     <BrowserRouter>
       <div className="dashboard">
         <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn} />
-        {/* <SideBar /> */}
+        <SideBar />
         <Routes>
           {/* <Route path="/home" element={<HomePage />} /> */}
           <Route path="/favorites" element={<Favorites />} />
