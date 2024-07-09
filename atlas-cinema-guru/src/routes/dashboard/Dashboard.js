@@ -3,7 +3,7 @@ import './dashboard.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from '../../components/navigation/Header';
 import SideBar from '../../components/navigation/SideBar';
-// import HomePage from './HomePage';
+import HomePage from './HomePage';
 
 // Fake Components
 const Favorites = () => <div>Favorites</div>;
@@ -17,7 +17,7 @@ function Dashboard({ userUsername, setIsLoggedIn }) {
         <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn} />
         <SideBar />
         <Routes>
-          {/* <Route path="/home" element={<HomePage />} /> */}
+          <Route path="/home" element={<HomePage />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/watchlater" element={<WatchLater />} />
           <Route path="*" element={<Navigate replace to="/home" />} />
