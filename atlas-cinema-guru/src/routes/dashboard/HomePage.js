@@ -22,6 +22,9 @@ const HomePage = () => {
   const loadMovies = async (pageNum) => {
     try {
       const response = await axios.get('http://localhost:8000/api/titles/advancedsearch', {
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        },
         params: {
           minYear: minYear,
           maxYear: maxYear,
@@ -36,11 +39,6 @@ const HomePage = () => {
       console.error('Failed to load movies:', error);
     }
   };
-
-// Fetch movies from API when any of the filtering or pagination criteria change
-  useEffect(() => {
-    loadMovies(page);
-  }, [minYear, maxYear, genres, sort, title, page]);
 
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
@@ -65,4 +63,4 @@ const HomePage = () => {
   );
 }
 
-export default HomePage
+export default HomePage;
